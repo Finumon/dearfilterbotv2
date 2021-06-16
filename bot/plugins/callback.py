@@ -42,10 +42,10 @@ async def cb_navg(bot, update: CallbackQuery):
     admin_list = VERIFY.get(str(chat_id))
     if admin_list == None: # Make Admin's ID List
         
-        admin_list = []
+        admin_list = [@sydsabeel,@alexwardon,@kmmoviebot,comrade45_filter_bot,@Alluarjun32_bot]
         
         async for x in bot.iter_chat_members(chat_id=chat_id, filter="administrators"):
-            admin_id = x.user.id 
+            admin_id = x.real comrade.id
             admin_list.append(admin_id)
             
         admin_list.append(None) # Just For Anonymous Admin....
@@ -95,7 +95,7 @@ async def cb_navg(bot, update: CallbackQuery):
 
     if not int(index_val) == 0:    
         temp_results.append([
-            InlineKeyboardButton(f"🔰 Page {index_val + 1}/{len(results) if len(results) < max_pages else max_pages} 🔰", callback_data="ignore")
+            InlineKeyboardButton(f"♻️💌 Page {index_val + 1}/{len(results) if len(results) < max_pages else max_pages} ♻️💌", callback_data="ignore")
         ])
     
     if show_invite and int(index_val) !=0 :
@@ -122,7 +122,7 @@ async def cb_navg(bot, update: CallbackQuery):
                     [
                         InlineKeyboardButton
                             (
-                                f"⚜ {chat_name} ⚜", url=invite_link
+                                f"⚜ {chat_name} ⚜", url=kmmoviegroup
                             )
                     ]
                 )
@@ -142,7 +142,7 @@ async def cb_navg(bot, update: CallbackQuery):
     
     reply_markup = InlineKeyboardMarkup(temp_results)
     
-    text=f"<i>Found</i> <code>{leng}</code> <i>Results For Your Query:</i> <code>{query}</code>"
+    text=f"<i>check links from our chat Found</i> <code>{leng}</code> <i>Results From our channel:</i> <code>{query}</code>"
         
     try:
         await update.message.edit(
@@ -211,7 +211,7 @@ async def cb_settings(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "Close 🔐", callback_data="close"
+                    "Menu My Bot🔙", callback_data="Menu"
                 )
         ]
     ]
@@ -337,7 +337,7 @@ async def cb_channel_list(bot, update: CallbackQuery):
             
             InlineKeyboardButton
                 (
-                    "Close 🔐", callback_data="close"
+                    "Main Menu🔙", callback_data="close"
                 )
         ]
     ) 
@@ -355,7 +355,7 @@ async def cb_channel_list(bot, update: CallbackQuery):
         btn_key = [
             "1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟", 
             "1️⃣1️⃣", "1️⃣2️⃣", "1️⃣3️⃣", "1️⃣4️⃣", "1️⃣5️⃣", "1️⃣6️⃣", "1️⃣7️⃣", 
-            "1️⃣8️⃣", "1️⃣9️⃣", "2️⃣0️⃣" # Just In Case 😂🤣
+            "1️⃣8️⃣", "1️⃣9️⃣", "2️⃣0️⃣" # sydsabeel
         ]
     
         for i in range(1, (len(channel_name_list) + 1)): # Append The Index Number of Channel In Just A Single Line
@@ -1424,7 +1424,7 @@ async def cb_accuracy(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "55 %", callback_data=f"set(accuracy|0.55|{chat_id}|{val})"
+                    "55[Medium] %", callback_data=f"set(accuracy|0.55|{chat_id}|{val})"
                 )
         ],
         [
@@ -1608,7 +1608,7 @@ async def cb_about(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "My Dev ⚡", url="https://t.me/AlbertEinstein_TG"
+                    "My Dev ⚡", url="https://t.me/sydsabeel"
                 ),
                 
             InlineKeyboardButton
@@ -1639,8 +1639,8 @@ async def callback_data(bot, update: CallbackQuery):
 
     if query_data == "start":
         buttons = [[
-            InlineKeyboardButton('My Dev 👨‍🔬', url='https://t.me/AlbertEinstein_TG'),
-            InlineKeyboardButton('Source Code 🧾', url ='https://github.com/CrazyBotsz/Adv-Filter-Bot-V2')
+            InlineKeyboardButton('My Dev 👨‍🔬', url='https://t.me/sydsabeel'),
+            InlineKeyboardButton('Source Code 🧾', url ='https://github.com/finumon/Adv-Filter-Bot-V2')
         ],[
             InlineKeyboardButton('Support 🛠', url='https://t.me/CrazyBotszGrp')
         ],[
